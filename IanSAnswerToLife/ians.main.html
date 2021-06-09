@@ -1,0 +1,47 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ian's answer to life</title>
+
+<link href="jps.css" rel="stylesheet" type="text/css">                <!-- *** JPSMODIFY **** -->
+
+</head>
+<body>
+
+
+<div id="main_content">
+	<div id= "playPlaceHolder" class="gamewindow" >
+		<img id="playerimg" src="images/player.png" />
+		<div id="chatArea">
+			<p> Say something to Ian :</p>
+			<input id="litetalkchatbox" type="text" size="55" value="Try to convince Ian not to jump !"  onKeyPress="BOT_chatboxOnKeypress(this,event);">
+			<input type="submit" name="sendButton" id="sendButton" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');">
+		</div>
+		
+	</div>
+	<div id= "iansPlaceHolder" class="gamewindow" > 
+		<img id="ianimg" src="images/sad.png" />
+		<div id="iansAnswer">
+			<p id="iansballoon" cols="30" rows="2" spellcheck="false">...</p>
+			<textarea id="litetalktracebox" spellcheck="false" style="visibility:visible;">.</textarea>
+		</div>
+		<div id="iansbrain">
+			<p> Etat mental de Ian: </p>
+			<div id="jauge">
+				<div id="jaugeValue"></div>
+			</div>
+			<p id="moodSentence">. . . </p>
+		</div>
+	</div>
+
+
+	<div id="defeatCard" class="finalCard"><img src="images/ghost.gif"/><p id="victory" class="endgameannouncement">PERDUUUU </br> Ian jumped and died</p><input type="submit" name="replayButton" id="replaybutton" value="TRY AGAIN" onClick="init();"></div>
+	<div id="victoryCard" class="finalCard"><img src="images/feudartifice.gif" /> <p id="victory" class="endgameannouncement">GAGNEEE </br>Ian didn't jump in front of you ! </p><input type="submit" name="replayButton" id="replaybutton" value="REPLAY" onClick="init();"></div>
+</div>
+
+</body>
+<script type="text/javascript" src="lib/litetalk.code.js"> </script>   <!-- first:  litetalk code        -->
+<script type="text/javascript" src="main.js">  </script>
+<script type="text/javascript" src="ians.code.js">  </script>         <!-- second: Application: fifi    -->
+</html>
